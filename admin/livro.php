@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Gerenciador de Editoras</title>
+        <title>Gerenciador de Livros</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="../css/style.css">
     </head>
@@ -60,18 +60,50 @@
                  <p><input type="submit" value="Enviar"></p>
              </form>
             </div>
-        </div>
 
+        </div>
+           <?php
+                $livros = ListarLivros();
+                if (isset($_GET['excluir'])) {
+                    ExcluirLivro($_GET['excluir']);
+                }
+    echo '<table border="1">
+                     <tr>
+                         <td>Cód: </td>
+                         <td>Nome: </td>
+                         <td>Idioma: </td>
+                         <td>QTD: </td>
+                         <td>Valor: </td>
+                         <td>Editora: </td>
+                         <td>Autor: </td>
+                         <td>Categorias: </td>
+                         <td>#</td>
+                     </tr>
+                 ';
+    while($l = $livros->fetch_array()){
+        echo '
+                     <tr>
+                         <td>'.$l['cd_livro'].'</td>
+                         <td>'.$l['nm_livro'].'</td>
+                         <td>'.$l['idioma_livro'].'</td>
+                         <td>'.$l['n_exemplares'].'</td>
+                         <td>'.$l['vl_livro'].'</td>
+                         <td>'.$l['id_editora'].'</td>
+                         <td>'.$l['id_autor'].'</td>
+                         <td>Categorias</td>
+                         <td>
+                            <a href="?excluir='.$l['cd_livro'].'">Excluir</a>
+                         </td>
+                     </tr>';
+
+    }  echo '</table>';
+     ?>
     </body>
 </html>
 <?php 
 
-
 if ($_POST) {
     CadastrarLivro($_POST['nome'], $_POST['idioma'], $_POST['isbn'], $_POST['ano'], $_POST['altura'], $_POST['largura'], $_POST['profundidade'], $_POST['peso'], $_POST['paginas'], $_POST['exemplares'], $_POST['valor'], $_POST['editora'], $_POST['autor'], $_POST['categorias']);
-    // CadastrarLivroCategoria(3, $_POST['categorias']);
-    // echo var_dump($_POST['categorias']);
-
 }
 
 

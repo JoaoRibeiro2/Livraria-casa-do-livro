@@ -86,9 +86,9 @@ function  ExcluirCategoria($cd_categoria){
     $sql = 'DELETE FROM tb_categoria WHERE cd_categoria ='.$cd_categoria;
     $res = $GLOBALS['conexao']->query($sql);
     if ($res) {
-        alert("Autor Excluido");
+        alert("Categoria Excluida");
     }else{
-        alert("Autor não excluido: ".$GLOBALS['conexao']->error);
+        alert("Categoria não excluida: ".$GLOBALS['conexao']->error);
     }
 }
 
@@ -117,6 +117,16 @@ function CadastrarLivro($nome, $idioma, $isbn, $ano, $altura, $largura, $profund
     }
 
 }
+
+function ListarLivros(){
+    $sql = 'SELECT * FROM tb_livro';
+    $res = $GLOBALS['conexao']->query($sql);
+    return $res;
+}
+
+
+
+
 function CadastrarLivroCategoria($id_livro, $categorias){
     $sql = 'INSERT INTO tb_livro_categoria VALUES ';
     $total = sizeof($categorias);
@@ -126,7 +136,6 @@ function CadastrarLivroCategoria($id_livro, $categorias){
     $sql = substr($sql, 0, -1);
     $sql.=';';
     $res = $GLOBALS['conexao']->query($sql);
-    echo $sql;
     if ($res) {
         alert("Livro cadastrado");
     }else{

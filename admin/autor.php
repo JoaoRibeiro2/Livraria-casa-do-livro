@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Gerenciador de Editoras</title>
+    <title>Gerenciador de Editoras</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <style type="text/css">
@@ -13,7 +13,7 @@
     </style>
 </head>
 <body>
-	<header>
+    <header>
         <h1>Casa do Livro</h1>
     </header>
     <div class="container">
@@ -46,7 +46,7 @@
                 <tr>
                     <td>id</td>
                     <td>Nome</td>
-                    <td>Logo</td>
+                    <td>Foto</td>
                     <td>#</td>
                 <tr>';
         while($a = $autores->fetch_array()){

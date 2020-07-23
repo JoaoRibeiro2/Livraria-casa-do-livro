@@ -3,12 +3,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<meta charset="utf-8">
+    <title>Gerenciador de categorias</title>
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 <body>
-	<header>
+    <header>
         <h1>Casa do Livro</h1>
     </header>
     <div class="container">
@@ -24,9 +24,9 @@
 
     <?php 
     if($_POST){
-    	$nome = $_POST['nome'];
-    	$descricao = $_POST['des'];
-    	 	CadastrarCategoria($nome,$descricao);
+        $nome = $_POST['nome'];
+        $descricao = $_POST['des'];
+            CadastrarCategoria($nome,$descricao);
     }
 
     if (isset($_GET['excluir'])) {
@@ -38,7 +38,7 @@
                 <tr>
                     <td>id</td>
                     <td>Nome</td>
-                    <td>Logo</td>
+                    <td>Descrição</td>
                     <td>#</td>
                 <tr>';
         while($c = $categorias->fetch_array()){
