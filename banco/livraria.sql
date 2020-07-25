@@ -102,7 +102,7 @@ foreign key (id_livro) references tb_livro(cd_livro)
 
 
 
-
+/*
 
 
 insert into tb_autor values (null, "Tolkien","tolkien.png");
@@ -124,3 +124,4 @@ select * from tb_autor;
 select * from tb_editora;
 select * from tb_livro;
 
+*/
