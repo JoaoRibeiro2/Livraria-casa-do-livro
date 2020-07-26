@@ -1,51 +1,139 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;1,100;1,500;1,600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
 *{
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
+	text-decoration: none;
 }
+
+
+
+
+
 body{
-	background: #003e46;
+
+}
+header{
+	background: #403828;
+	width: 100%;
+	height: 60px;
+	margin: 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+}
+
+
+ h1{ 
+	margin: auto 10px;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+	color: #C5A055;
+ }
+.menu
+{
+	margin: auto 40px;
+}
+.lista{
+	display: flex;
+	flex-direction: row;
+}
+.lista li 
+{
+	margin: auto 10px;
+	list-style: none;
+
+}
+
+
+.lista li a
+{
+	text-decoration: none;
+	color: white;
+}
+
+.pesquisar
+{
+	margin: auto 15px;
+}
+
+
+.pesquisar input[type="text"]{
+	width: 85%;
+ 	float: left; 
+ 	height: 15px;
+ 	padding: 15px 10px; 
+ 	border: 1px solid #fff;
+ 	border-radius: 5px 0 0 5px;
+ 	outline: none;
+ }
+.pesquisar button
+{
+	width: 15%;
+	height: 15px;
+	float: right;
+	padding: 15px 10px;
+	background: #C5A055; 
+	color: #fff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	cursor: pointer;
+	border: 1px solid #C5A055;
+	border-radius: 0 5px 5px 0;
 }
-header{
-	width: 100%;
-	height: 120px;
-	background: blue;
-}
-.menu{
-	width: 100%;
-	height: 50px;
-	background: #AE9056 ;
-	padding: 5px 10px;
-	
-}
-.titulo{
-	padding: 10px 20px;
+
+
+.inicio{
+	width: 100%; 
+	height: 250px;
+	overflow: hidden;
+	border-top: 1px solid #403828;
+	background: url('../admin/img/fundo_livraria.png') no-repeat;
+	background-size: cover; 
 	box-sizing: border-box;
-	background: #fff;
-}
-.titulo h1{
-	font-family: 'Poppins', sans-serif;
-	font-weight: 700;
-	color: #AE9056;
-}
-.container{
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+	align-items: center;
 }
-.formulario
+
+.title
 {
-	position: relative;
-	width: 800px;
-	height: 400px;
-	position: relative;
-	background: black;
-	box-shadow: 0 30px 30px rgba(0,0,0,.5);
+	margin: auto;
+	height: 100px;
+	width: 300px;
+	border-top: 3px solid #C5A055;
+	border-bottom: 3px solid #C5A055;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-weight: 300;
+}
+
+
+.linha
+{
+	margin: 50px auto;
+	width: 70%;
+	height: 350px;
+	box-sizing: border-box;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+}
+
+.produtos{
+	border: 1px solid gray;
+	width: 240px;
+	height: 340px;
+	margin: auto;
+
+
+
 }
