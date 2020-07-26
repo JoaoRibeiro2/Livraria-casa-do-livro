@@ -63,5 +63,7 @@
         }
         echo '</table>';
     ?>
+    <br>
+     <p><a href="../pag">Voltar</a></p>
 </body>
 </html>

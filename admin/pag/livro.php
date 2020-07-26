@@ -2,7 +2,6 @@
 
 include('../controllers/ControllerLivro.php');
 
-
  ?>
 
 <!DOCTYPE html>
@@ -106,6 +105,8 @@ include('../controllers/ControllerLivro.php');
 
     }  echo '</table>';
      ?>
+     <br>
+     <p><a href="../pag">Voltar</a></p>
     </body>
 </html>
 <?php 

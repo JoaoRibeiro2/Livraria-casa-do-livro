@@ -17,32 +17,6 @@ function CadastrarLivro($nome, $idioma, $isbn, $ano, $altura, $largura, $profund
 
 }
 
-function ListarLivros(){
-    $sql = 'SELECT * FROM tb_livro';
-    $res = $GLOBALS['conexao']->query($sql);
-    return $res;
-}
-
-function ListarEditoras(){
-    $sql = 'SELECT * FROM tb_editora';
-    $res = $GLOBALS['conexao']->query($sql);
-    return $res;
-}
-
-function ListarCategoria(){
-    $sql = 'SELECT * FROM tb_categoria';
-    $res = $GLOBALS['conexao']->query($sql);
-    return $res;
-}
-
-function ListarAutor(){
-    $sqlAutor = 'SELECT * FROM tb_autor';
-    $resAutor = $GLOBALS['conexao']->query($sqlAutor);
-    return $resAutor;
-}
-
-
-
 function CadastrarLivroCategoria($id_livro, $categorias){
     $sql = 'INSERT INTO tb_livro_categoria VALUES ';
     $total = sizeof($categorias);
@@ -70,7 +44,30 @@ function  ExcluirCategoria($cd_categoria){
     }
 }
 
+///////////////////////////// Funções Listar /////////////////////////////
+function ListarLivros(){
+    $sql = 'SELECT * FROM tb_livro';
+    $res = $GLOBALS['conexao']->query($sql);
+    return $res;
+}
 
+function ListarEditoras(){
+    $sql = 'SELECT * FROM tb_editora';
+    $res = $GLOBALS['conexao']->query($sql);
+    return $res;
+}
+
+function ListarCategoria(){
+    $sql = 'SELECT * FROM tb_categoria';
+    $res = $GLOBALS['conexao']->query($sql);
+    return $res;
+}
+
+function ListarAutor(){
+    $sqlAutor = 'SELECT * FROM tb_autor';
+    $resAutor = $GLOBALS['conexao']->query($sqlAutor);
+    return $resAutor;
+}
 
 
  ?>
