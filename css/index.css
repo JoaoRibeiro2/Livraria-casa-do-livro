@@ -39,10 +39,15 @@ header{
 	color: #C5A055;
 	font-weight: 200;
  }
+
+
+
 .menu
 {
 	margin: auto 40px;
 }
+
+
 .lista{
 	display: flex;
 	flex-direction: row;
@@ -128,17 +133,28 @@ header{
 .title h2{
 	font-family: var(--title-family);
 	font-size: 25pt;
-	font-weight: 300;
+	
 }
 
 /*Sessao*/
+.principais
+{
+	margin: 20px 17%;
+	height: 40px;
+	border-bottom: 3px solid #C5A055;
+	color: #555;
+	font-family: 'Arial';
+	font-weight: 200;
+	padding-right: 1%;
+	position: relative;
+}
 
 
 .linha
 {
 	margin: 50px auto;
 	width: 70%;
-	height: 350px;
+	height: 360px;
 	box-sizing: border-box;
 	overflow: hidden;
 	display: flex;
@@ -146,10 +162,14 @@ header{
 }
 
 .produtos{
-	border: 1px solid gray;
+	border: 0.5px solid rgba(0,0,0,0.05);
 	width: 240px;
 	height: 340px;
-	margin: auto;
+	margin: 10px auto;
+	font-family: 'Arial', sans-serif;
+	box-sizing: border-box;
+	overflow: hidden;
+	box-shadow: 4px 5px 4px rgba(0,0,0,0.2);
 }
 .img
 {
@@ -165,4 +185,46 @@ header{
 {
 	max-height: 200px;
 	max-width: 140px;
+}
+
+.paragrafo{
+	color: #555;
+	display: flex;
+	justify-content: flex-start;
+	box-sizing: border-box;
+	padding-left: 20px;
+	margin-top: 20px;
+	font-size: 15px;
+	height: 32px;
+}
+
+.preco{
+	display: flex;
+	justify-content: flex-start;
+	box-sizing: border-box;
+	padding-left: 20px;
+	margin-top: 20px;
+	font-family: 'Arial';
+	color: #333;
+}
+.promocao{
+	color: #555;
+	display: flex;
+	justify-content: flex-start;
+	box-sizing: border-box;
+	padding-left: 20px;
+	margin-top: 10px;
+	font-size: 13px;
+}
+.categorias
+{
+
+}
+
+
+footer
+{
+	width: 100%;
+	height: 230px;
+	background: #403828;
 }
