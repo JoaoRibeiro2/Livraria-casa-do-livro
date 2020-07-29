@@ -145,9 +145,8 @@ header{
 	color: #555;
 	font-family: 'Arial';
 	font-weight: 200;
-	padding-right: 1%;
-	position: relative;
-}
+	width: 170px;
+	}
 
 
 .linha
@@ -218,7 +217,10 @@ header{
 }
 .categorias
 {
-
+	float: left;
+	width: 12%;
+	height: 600px;
+	background: blue;
 }
 
 
