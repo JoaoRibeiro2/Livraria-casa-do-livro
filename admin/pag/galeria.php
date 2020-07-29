@@ -9,7 +9,7 @@ include('../controllers/ControllerFotos.php');
 		?>
 	
 	<form action="galeria.php" method="POST" enctype="multipart/form-data">
-		
+		<input type="hidden" name="id_livro" value="<?php echo $_GET['livro']; ?>">
 		Enviar nova foto: <br><br>
 		<input type="file" name="foto"><br><br>
 		<input type="submit" value="Enviar">
@@ -17,15 +17,15 @@ include('../controllers/ControllerFotos.php');
 	<br>
 <?php 
 
+}
 
-}
-if($_POST){
-    $destino = '../img/livros/'.$_FILES['foto']['name'];
+	if ($_POST) {
+	$destino = '../img/livros/'.$_FILES['foto']['name'];
 	if (move_uploaded_file($_FILES['foto']['tmp_name'], $destino)) {
-		// echo $destino;
 		CadastrarFoto($destino, $_POST['id_livro']);
-	 }else{
-	 	alert("Erro ao enviar foto");
-	 }
-}
+	}else{
+		echo "Não foi";
+	}
+
+	}
  ?>
