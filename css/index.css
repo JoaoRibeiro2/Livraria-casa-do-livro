@@ -218,9 +218,12 @@ header{
 .categorias
 {
 	float: left;
-	width: 12%;
-	height: 600px;
+	width: 14%;
+	height: 900px;
 	background: blue;
+	position: absolute;
+	left: 2px;
+	top: 330px;
 }
 
 
@@ -230,3 +233,4 @@ footer
 	height: 230px;
 	background: #403828;
 }
+
