@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 
 <?php 
-include('../controllers/ControllerLivro.php');
+include('../controllers/ControllerFotos.php');
 
 
 	if (isset($_GET['livro'])){
@@ -20,9 +20,12 @@ include('../controllers/ControllerLivro.php');
 
 }
 if($_POST){
-    $destino = '../img/editora/'.$_FILES['nome']['name'];
-
-	echo $destino;
-	
+    $destino = '../img/livros/'.$_FILES['foto']['name'];
+	if (move_uploaded_file($_FILES['foto']['tmp_name'], $destino)) {
+		// echo $destino;
+		CadastrarFoto($destino, $_POST['id_livro']);
+	 }else{
+	 	alert("Erro ao enviar foto");
+	 }
 }
  ?>
